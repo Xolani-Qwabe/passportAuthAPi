@@ -19,6 +19,7 @@ The **Music Reviews** app is a Web3-powered platform built on the Avalanche bloc
 - **Credential Issuance**: Verifiable credentials (e.g., persona, skill verification, ownership) are issued using Veramo.
 - **Fan Engagement**: Followers complete tasks and share music promos to earn rewards.
 - **Fiat and Crypto Support**: Payouts are made in AVAX or fiat, with deposits accepted in fiat.
+- **Storage Assurance**: Masters and resulting works will be stored securely on Fleek storage as assurance/security for all stakeholders.
 
 ### 3. **Technologies Used**
 - **Backend**: Node.js with Express.js
@@ -26,7 +27,7 @@ The **Music Reviews** app is a Web3-powered platform built on the Avalanche bloc
 - **Blockchain**: Avalanche Subnet (CIRTA - Creative Intellectual Rights to Assets)
 - **DID Management**: Veramo for decentralized identity and credential issuance
 - **AI Tools**: Accurascan for document verification and liveliness detection
-- **Storage**: MongoDB for user and metadata storage
+- **Storage**: MongoDB for user and metadata storage, Fleek for secure storage of masters and resulting works
 - **Smart Contracts**: Solidity for staking and NFT minting
 
 ---
@@ -101,7 +102,7 @@ The **Music Reviews** app is a Web3-powered platform built on the Avalanche bloc
 - **Core Wallet** support for Avalanche transactions.
 - **Royalty Collection Partnerships**: Integration with South African royalty bodies.
 - **Enhanced AI Tools**: Automating credential verification and grading.
-- **Decentralized Storage**: Leverage IPFS for NFT metadata.
+- **Decentralized Storage**: Continue leveraging Fleek for enhanced storage solutions.
 
 ---
 
@@ -132,8 +133,11 @@ For inquiries or support:
 - **Avalanche Dev Team**: For guidance on subnet development.
 - **Accurascan**: For document verification tools.
 - **Veramo**: For decentralized identity management.
+- **Fleek**: For secure and decentralized storage solutions.
 
 ---
 
 Let's revolutionize the music industry with Web3 technology!
 
+
+m

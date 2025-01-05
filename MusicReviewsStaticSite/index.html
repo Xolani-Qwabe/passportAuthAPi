@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Music Reviews is a Web3-powered app built on Avalanche blockchain to empower independent artists, investors, suppliers, and fans.">
+    <title>Music Reviews - Revolutionizing Music with Web3</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <h1 class="title">Music Reviews</h1>
+            <nav class="nav">
+                <ul class="nav-links">
+                    <li class="link-item"><a href="#" data-page="overview">Overview</a></li>
+                    <li class="link-item"><a href="#" data-page="features">Features</a></li>
+                    <li class="link-item"><a href="#" data-page="users">User Types</a></li>
+                    <li class="link-item"><a href="#" data-page="process">How It Works</a></li>
+                    <li class="link-item"><a href="#" data-page="form">Beta Test</a></li>
+                    <li class="link-item"><a href="#" data-page="about">About</a></li>
+                    <li class="link-item"><a href="#" data-page="contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="app" class="app-container">
+        <!-- Content will load dynamically here -->
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2025 Music Reviews. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // GSAP Animations
+        gsap.from("header", { duration: 1, y: -50, opacity: 0, ease: "power3.out" });
+        gsap.from("footer", { duration: 1, y: 50, opacity: 0, ease: "power3.out" });
+
+        // Content for each page
+        const pages = {
+            overview: `
+                <section id="overview" class="overview-page">
+                    <div class="overview-content">
+                        <h2 class="section-title">Overview</h2>
+                    </div>
+                    <div class="overview-text">
+                        <p>Music Reviews is a Web3-powered app built on Avalanche blockchain to empower independent artists, investors, suppliers, and fans. The platform enables artists to stake streaming rights to mint NFTs, distribute tokens, and engage with fans. Investors can fund projects and earn from streaming rights NFTs. Suppliers can offer marketing and production services. Fans can upvote reviews, complete tasks, and share music promos to earn rewards.</p>
+                    </div>
+                    <div class="image">
+                        <img src="images/overview.png" alt="Music Reviews Overview">
+                    </div>
+                </section>
+            `,
+            features: `
+                <section id="features" class="flex page-section">
+                    <div class="content">
+                        <h2 class="section-title">Features</h2>
+                        <ul class="section-list">
+                            <li>Staking & NFT Minting for artists</li>
+                            <li>Streaming revenue distribution</li>
+                            <li>Credential issuance with Veramo</li>
+                            <li>Fan engagement with task rewards</li>
+                            <li>Secure storage on Fleek for masters and resulting works</li>
+                        </ul>
+                    </div>
+                    <div class="image">
+                        <img src="images/features.png" alt="App Features">
+                    </div>
+                </section>
+            `,
+            users: `
+                <section id="users" class="flex page-section">
+                    <div class="content">
+                        <h2 class="section-title">User Types</h2>
+                        <ul class="section-list">
+                            <li><strong>Investors:</strong> Fund projects and earn from streaming rights NFTs.</li>
+                            <li><strong>Suppliers:</strong> Credential-vetted service providers offering marketing and production services.</li>
+                            <li><strong>Artists/Creators:</strong> Stake streaming rights to mint NFTs and distribute tokens.</li>
+                            <li><strong>Followers:</strong> Upvote reviews, complete tasks, and share music promos to earn rewards.</li>
+                        </ul>
+                    </div>
+                    <div class="image">
+                        <img src="images/users.png" alt="User Types">
+                    </div>
+                </section>
+            `,
+            process: `
+                <section id="process" class="flex page-section">
+                    <div class="content">
+                        <h2 class="section-title">How It Works</h2>
+                        <p>Explore our detailed process for artists, investors, suppliers, and fans.</p>
+                    </div>
+                </section>
+            `,
+            form: `
+                <section id="form" class="flex page-section">
+                    <div class="content">
+                        <h2 class="section-title">Join the Beta</h2>
+                        <p>Sign up to test the beta version of Music Reviews.</p>
+                    </div>
+                </section>
+            `,
+        };
+
+        // SPA Navigation
+        const app = document.getElementById('app');
+        const links = document.querySelectorAll('nav a');
+
+        function loadPage(page) {
+            app.innerHTML = pages[page] || '<p>Page not found.</p>';
+            gsap.from("#app", { duration: 0.5, opacity: 0 });
+        }
+
+        links.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const page = link.getAttribute('data-page');
+                loadPage(page);
+            });
+        });
+
+        // Load default page
+        loadPage('overview');
+    </script>
+</body>
+</html>
